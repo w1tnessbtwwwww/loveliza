@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    container_name: loveliza
+    restart: unless-stopped
+    ports:
+      # наружу не торчит — доступ только через nginx на хосте
+      - "127.0.0.1:3000:3000"
